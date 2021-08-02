@@ -1,0 +1,17 @@
+:host {
+  padding: 1rem;
+  .user_image {
+    // background-image: url('https://avatars.githubusercontent.com/u/5091152?s=400&v=4');
+    height: 10rem;
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .no-user {
+    height: 230px;
+    width: 100%;
+    // background-color: grey;
+  }
+}
