@@ -1,10 +1,6 @@
-<div>
-  <button class="btn" (click)="getData()">Generar</button>
-</div>
-
-<div class="bg-blue-100 p-4 rounded-md" *ngIf="user; else noUser">
+<div class="bg-red-100 p-4 rounded-md" *ngIf="user; else noUser">
   <div
-    class="user_image rounded-sm"
+    class="user_image rounded-sm justify-self-start"
     [style.background-image]="'url(' + user.picture.large"
   ></div>
   <div class="sub-title text-center px-4 font-bold">
@@ -12,9 +8,13 @@
   </div>
   <div class="email font-thin">{{ user.email }}</div>
 
-  <div>
-    <button class="btn">Seleccionar ></button>
+  <div class="py-2">
+    <button class="btn" (click)="addPerson(user)">Seleccionar ></button>
   </div>
+</div>
+
+<div class="py-2">
+  <button class="btn" (click)="getData()">Generar Nuevo Usuario</button>
 </div>
 
 <ng-template #noUser>

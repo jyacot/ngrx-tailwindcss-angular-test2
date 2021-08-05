@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { removePerson } from '../store/people/person.actions';
 import { Person } from '../store/people/person.model';
 
 @Component({
@@ -14,6 +15,12 @@ export class UsersListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.store.select('person').subscribe((p) => (this.users = p));
+    this.store.select('person').subscribe((p) => {
+      this.users = p;
+    });
+  }
+
+  deleteUser(user_id: number) {
+    this.store.dispatch(removePerson({ id: user_id }));
   }
 }

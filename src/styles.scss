@@ -3,8 +3,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body{
-    font-family: 'Public Sans', sans-serif;
-    font-size: 16px;
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-size: 16px;
 }
 
+.btn {
+  @apply p-2 text-white bg-blue-400 rounded-md;
+}

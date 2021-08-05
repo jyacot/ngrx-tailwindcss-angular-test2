@@ -1,3 +1,20 @@
 <div class="text-right">
-  {{ users | json }}
+  <ul style="width: 100%">
+    <li *ngFor="let user of users" class="border-b-2 flex flex-row gap-2 p-2">
+      <img [src]="user.picture.thumbnail" alt="image" class="rounded-full" />
+      <span>
+        {{ user.name.title }} {{ user.name.first }} {{ user.name.last }}
+      </span>
+
+      <div class="float-right flex-1">
+        <button
+          class="rounded-md bg-red-400 p-2 text-white"
+          (click)="deleteUser(user.id)"
+        >
+          x
+        </button>
+      </div>
+    </li>
+  </ul>
+  <!-- {{ users | json }} -->
 </div>
