@@ -1,4 +1,5 @@
-#Pruebas de Ngrx con Ángular
+# Pruebas de Ngrx con Angular
+
 Práctica simple implementado Ngrx-Angular usando Tailwind
 
 - Generador aleatorio de personas mediante API [RandomUser](https://randomuser.me/)
