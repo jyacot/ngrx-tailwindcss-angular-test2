@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Pruebas de Ngrx con Angular
+=======
+# Pruebas de Ngrx con Ángular
+>>>>>>> 5addb38ade27ba554e3fe2acaa02c02867fb9ced
 
 Práctica simple implementado Ngrx-Angular usando Tailwind
 
