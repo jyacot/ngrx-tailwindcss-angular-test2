@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppState } from '../app-reducers';
 import { removePerson } from '../store/people/person.actions';
 import { Person } from '../store/people/person.model';
 
@@ -10,7 +11,7 @@ import { Person } from '../store/people/person.model';
 })
 export class UsersListComponent implements OnInit {
   users: Person[];
-  constructor(private store: Store<{ person: Person[] }>) {
+  constructor(private store: Store<AppState>) {
     this.users = [];
   }
 

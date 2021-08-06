@@ -4,6 +4,7 @@ import { pluck } from 'rxjs/operators';
 import { person, Person } from '../store/people/person.model';
 import { Store } from '@ngrx/store';
 import * as actions from '../store/people/person.actions';
+import { AppState } from '../app-reducers';
 
 @Component({
   selector: 'app-user-card',
@@ -14,7 +15,7 @@ export class UserCardComponent implements OnInit {
   user: Person | null;
   constructor(
     private radomUser: RadomuserService,
-    private store: Store<{ person: Person[] }>
+    private store: Store<AppState>
   ) {
     this.user = null;
   }
